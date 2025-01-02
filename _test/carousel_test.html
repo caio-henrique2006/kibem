@@ -11,9 +11,35 @@
         <img src="" id="current-slide-img" />
       </div>
 
-      <a onclick=""> ❯ </a>
-      <a onclick=""> ❮ </a>
+      <button onclick="nextImage()">❯</button>
+      <button onclick="previousImage()">❮</button>
     </div>
   </body>
-  <script></script>
+  <script>
+    let img_index = 0;
+    const carousel_img = ["./img_1.jpg", "./img_2.jpg", "./img_3.jpg"];
+
+    function changeImage(img_url) {
+      const current_slide_img = document.getElementById("current-slide-img");
+      current_slide_img.src = img_url;
+    }
+
+    function nextImage() {
+      if (img_index >= carousel_img.length - 1) {
+        img_index = 0;
+      } else {
+        img_index += 1;
+      }
+      changeImage(carousel_img[img_index]);
+    }
+
+    function previousImage() {
+      if (img_index <= 0) {
+        img_index = carousel_img.length - 1;
+      } else {
+        img_index -= 1;
+      }
+      changeImage(carousel_img[img_index]);
+    }
+  </script>
 </html>
