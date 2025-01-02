@@ -4,16 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teste do carousel</title>
+    <style>
+      #carousel-content {
+        position: relative;
+        width: 1000px;
+      }
+      #current-slide {
+        display: block;
+      }
+      .next,
+      .prev {
+        position: absolute;
+        top: 50%;
+        width: auto;
+      }
+
+      .next {
+        right: 0;
+      }
+    </style>
   </head>
   <body>
+    <p>TextText</p>
+    <p>TextText</p>
+    <p>TextText</p>
     <div id="carousel-content">
       <div id="current-slide">
         <img src="" id="current-slide-img" />
       </div>
-
-      <button onclick="nextImage()">❯</button>
-      <button onclick="previousImage()">❮</button>
+      <button class="next" onclick="nextImage()">❯</button>
+      <button class="prev" onclick="previousImage()">❮</button>
     </div>
+    <p>TextText</p>
+    <p>TextText</p>
+    <p>TextText</p>
   </body>
   <script>
     let img_index = 0;
