@@ -28,13 +28,12 @@
         align-items: center;
       }
       .dot {
-        background-color: bisque;
-        padding: 10px;
-        border-radius: 100px;
+        color: #bbbbbb;
+        filter: opacity(75%);
         margin: 10px;
       }
       .dot:hover {
-        background-color: rgb(187, 167, 143);
+        color: #717171;
         cursor: pointer;
       }
       .next,
@@ -58,8 +57,12 @@
       <div id="current-slide">
         <img src="" id="current-slide-img" />
       </div>
-      <button class="next" onclick="nextImage(1)">❯</button>
-      <button class="prev" onclick="nextImage(-1)">❮</button>
+      <div class="next" onclick="nextImage(1)">
+        <i class="fa fa-chevron-right fa-2x"></i>
+      </div>
+      <div class="prev" onclick="nextImage(-1)">
+        <i class="fa fa-chevron-left fa-2x"></i>
+      </div>
       <div class="dot-content">
         <div class="dot-line" id="dot-place"></div>
       </div>
@@ -68,12 +71,20 @@
     <p>TextText</p>
     <p>TextText</p>
   </body>
+  <script
+    src="https://kit.fontawesome.com/998c60ef77.js"
+    crossorigin="anonymous"
+  ></script>
   <script>
     let img_index = 0;
     const carousel_img = ["./img_1.jpg", "./img_2.jpg", "./img_3.jpg"];
 
     function changeImage(img_url) {
       const current_slide_img = document.getElementById("current-slide-img");
+      const current_dot = document.getElementById("dot_" + img_url);
+      if (current_dot.active == "true") {
+      }
+      current_dot.style = `color: #717171;`;
       current_slide_img.src = img_url;
     }
 
@@ -91,7 +102,7 @@
       const display = document.getElementById("dot-place");
       carousel_img.forEach((url) => {
         display.innerHTML += `
-          <p class="dot" onclick="changeImage('${url}')">A</p>
+          <i class="dot fa fa-circle fa-2x" onclick="changeImage('${url}')" id='dot_${url}' active='false'></i>
         `;
       });
     }
