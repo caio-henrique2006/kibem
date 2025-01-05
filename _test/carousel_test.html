@@ -17,6 +17,26 @@
       #current-slide-img {
         width: 100%;
       }
+      .dot-line {
+        position: absolute;
+        bottom: 0%;
+        left: 45%;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .dot {
+        background-color: bisque;
+        padding: 10px;
+        border-radius: 100px;
+        margin: 10px;
+      }
+      .dot:hover {
+        background-color: rgb(187, 167, 143);
+        cursor: pointer;
+      }
       .next,
       .prev {
         position: absolute;
@@ -38,8 +58,11 @@
       <div id="current-slide">
         <img src="" id="current-slide-img" />
       </div>
-      <button class="next" onclick="nextImage()">❯</button>
-      <button class="prev" onclick="previousImage()">❮</button>
+      <button class="next" onclick="nextImage(1)">❯</button>
+      <button class="prev" onclick="nextImage(-1)">❮</button>
+      <div class="dot-content">
+        <div class="dot-line" id="dot-place"></div>
+      </div>
     </div>
     <p>TextText</p>
     <p>TextText</p>
@@ -54,22 +77,25 @@
       current_slide_img.src = img_url;
     }
 
-    function nextImage() {
-      if (img_index >= carousel_img.length - 1) {
+    function nextImage(value) {
+      img_index += value;
+      if (img_index > carousel_img.length - 1) {
         img_index = 0;
-      } else {
-        img_index += 1;
+      } else if (img_index < 0) {
+        img_index = carousel_img.length - 1;
       }
       changeImage(carousel_img[img_index]);
     }
 
-    function previousImage() {
-      if (img_index <= 0) {
-        img_index = carousel_img.length - 1;
-      } else {
-        img_index -= 1;
-      }
-      changeImage(carousel_img[img_index]);
+    function displayDots() {
+      const display = document.getElementById("dot-place");
+      carousel_img.forEach((url) => {
+        display.innerHTML += `
+          <p class="dot" onclick="changeImage('${url}')">A</p>
+        `;
+      });
     }
+
+    displayDots();
   </script>
 </html>
