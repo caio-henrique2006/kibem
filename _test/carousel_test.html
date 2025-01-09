@@ -58,10 +58,10 @@
         <img src="" id="current-slide-img" />
       </div>
       <div class="next" onclick="nextImage(1)">
-        <i class="fa fa-chevron-right fa-2x"></i>
+        <img src="../assets/next.png" width="50px" />
       </div>
       <div class="prev" onclick="nextImage(-1)">
-        <i class="fa fa-chevron-left fa-2x"></i>
+        <img src="../assets/previous.png" width="50px" />
       </div>
       <div class="dot-content">
         <div class="dot-line" id="dot-place"></div>
@@ -71,10 +71,6 @@
     <p>TextText</p>
     <p>TextText</p>
   </body>
-  <script
-    src="https://kit.fontawesome.com/998c60ef77.js"
-    crossorigin="anonymous"
-  ></script>
   <script>
     let img_index = 0;
     const carousel_img = ["./img_1.jpg", "./img_2.jpg", "./img_3.jpg"];
@@ -84,7 +80,7 @@
       const current_dot = document.getElementById("dot_" + img_url);
       if (current_dot.active == "true") {
       }
-      current_dot.style = `color: #717171;`;
+      current_dot.src = "../assets/dot_selected.png";
       current_slide_img.src = img_url;
     }
 
@@ -102,7 +98,7 @@
       const display = document.getElementById("dot-place");
       carousel_img.forEach((url) => {
         display.innerHTML += `
-          <i class="dot fa fa-circle fa-2x" onclick="changeImage('${url}')" id='dot_${url}' active='false'></i>
+          <img src="../assets/dot_not_selected.png" width="30px" class="dot" onclick="changeImage('${url}')" id='dot_${url}' active='false'></img>
         `;
       });
     }
