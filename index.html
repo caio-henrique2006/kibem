@@ -3,68 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/footer.css">
-    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css" />
+    <link rel="stylesheet" href="./style/header.css" />
+    <link rel="stylesheet" href="./style/carousel.css" />
     <title>Home</title>
   </head>
   <body>
     <header class="header">
-        <div class="container-header">
-          <div class="logo"><img src="kibem.png" alt="" height="50px"></div>
-            <ul>
-                <li><a href="/kibem/pages/produto/index.html">Produtos</a></li>
-                <li><a href="/kibem/pages/receita/index.html">Receita</a></li>
-                <li><a href="/kibem/pages/contato/index.html">Contato</a></li>
-                <li><a href="/kibem/pages/sobre/index.html">Sobre</a></li>
-              </ul>
-        </div>
-
+      <div class="container-header">
+        <div class="logo"><img src="kibem.png" alt="" height="50px" /></div>
+        <ul>
+          <li><a href="/kibem/pages/produto/index.html">Produtos</a></li>
+          <li><a href="/kibem/pages/receita/index.html">Receita</a></li>
+          <li><a href="/kibem/pages/contato/index.html">Contato</a></li>
+          <li><a href="/kibem/pages/sobre/index.html">Sobre</a></li>
+        </ul>
+      </div>
     </header>
 
-    <!--footer-->
+    <!-- Banner -->
 
-    
-<footer class="footer">
-  <div class="container">
-      <div class="row">
-          <div class="footer-col">
-              <h4>Páginas</h4>
-              <ul>
-                <li><a href="/kibem/index.html">Home</a></li>
-                <li><a href="/kibem/pages/produto/index.html">Produtos</a></li>
-                <li><a href="/kibem/pages/receita/index.html">Receita</a></li>
-                <li><a href="/kibem/pages/contato/index.html">Contato</a></li>
-              </ul>
-          </div>
-          <div class="footer-col">
-              <h4>Contato</h4>
-              <ul>
-                  <li><a href="#">75-2332-2323</a></li>
-                  <li><a href="#">Email@gmail.com</a></li>
-                  
-                  
-                  
-              </ul>
-          </div>
-          
-          <div class="footer-col">
-              <h4>Rede social</h4>
-              <div class="social-links">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  
-              </div>
-          </div>
+    <!-- Apresentação da marca -->
+    <div>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+    </div>
+
+    <!-- Lista de Produtos -->
+    <div>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+    </div>
+
+    <!-- Carousel -->
+    <div id="carousel-content">
+      <div id="current-slide">
+        <img src="" id="current-slide-img" />
       </div>
-  </div>
+      <div class="next" onclick="nextImage(1)">
+        <img src="../assets/next.svg" width="30px" />
+      </div>
+      <div class="prev" onclick="nextImage(-1)">
+        <img src="../assets/previous.svg" width="30px" />
+      </div>
+      <div class="dot-content">
+        <div class="dot-line" id="dot-place"></div>
+      </div>
+    </div>
 
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Páginas</h4>
+            <ul>
+              <li><a href="/kibem/index.html">Home</a></li>
+              <li><a href="/kibem/pages/produto/index.html">Produtos</a></li>
+              <li><a href="/kibem/pages/receita/index.html">Receita</a></li>
+              <li><a href="/kibem/pages/contato/index.html">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <ul>
+              <li><a href="#">75-2332-2323</a></li>
+              <li><a href="#">Email@gmail.com</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Rede social</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-
-  </div>
-</footer>
-
-<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
-
+    <script
+      src="https://kit.fontawesome.com/998c60ef77.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/carrossel.js"></script>
   </body>
 </html>
