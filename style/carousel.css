@@ -1,0 +1,42 @@
+#carousel-content {
+  position: relative;
+}
+#current-slide {
+  display: block;
+  margin-bottom: -4px;
+}
+#current-slide-img {
+  width: 100%;
+}
+.dot-line {
+  position: absolute;
+  bottom: 1%;
+  left: 43%;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dot {
+  margin: 30px;
+}
+.dot:hover {
+  cursor: pointer;
+}
+.next,
+.prev {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin: 0px 30px 0px 30px;
+}
+
+.next:hover,
+.prev:hover {
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+}
