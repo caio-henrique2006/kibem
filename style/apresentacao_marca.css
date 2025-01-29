@@ -1,0 +1,28 @@
+.apresentacao_marca_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: url("/kibem/assets/background_beans.png");
+  padding: 90px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin-top: 50px;
+}
+
+.apresentacao_marca_container_text {
+  margin-right: 30px;
+}
+
+.apresentacao_marca_title {
+  padding: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.apresentacao_marca_paragraph {
+  padding: 20px;
+  font-size: 36px;
+  color: white;
+}
