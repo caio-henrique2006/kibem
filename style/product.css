@@ -1,0 +1,36 @@
+.product_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: url("/kibem/assets/background_beans.png");
+  padding: 9%;
+}
+.product_card {
+  background-color: white;
+  border: 0px solid black;
+  border-radius: 10px;
+  margin-right: 50px;
+  filter: drop-shadow(5px 5px 10px rgb(59, 59, 59));
+}
+.product_card_background {
+  background: url("/kibem/assets/kibem.png") center no-repeat;
+  background-size: contain;
+  padding: 30px;
+  margin: 10px;
+  /* filter: opacity(50%); */
+}
+.product_text {
+  padding: 20px;
+}
+.product_title {
+  padding: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+.product_paragraph {
+  padding: 20px;
+  font-size: 36px;
+  color: white;
+}
