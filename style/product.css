@@ -14,9 +14,9 @@
   filter: drop-shadow(5px 5px 10px rgb(59, 59, 59));
 }
 .product_card_background {
-  background: url("/kibem/assets/kibem.png") center no-repeat;
+  background: url("/kibem/assets/kibem_transparent.png") center no-repeat;
   background-size: contain;
-  padding: 30px;
+  padding: 20px;
   margin: 10px;
   /* filter: opacity(50%); */
 }
@@ -33,4 +33,30 @@
   padding: 20px;
   font-size: 36px;
   color: white;
+}
+
+.product_line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(235, 235, 235);
+}
+
+.product_line_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0cb8ef;
+  border: 0px solid black;
+  border-radius: 5px;
+  filter: drop-shadow(5px 5px 10px rgb(59, 59, 59));
+  padding: 20px;
+}
+
+.product_line_item_back {
+  background: url("/kibem/assets/kibem_transparent.jpg") center no-repeat;
+  background-size: contain;
 }
